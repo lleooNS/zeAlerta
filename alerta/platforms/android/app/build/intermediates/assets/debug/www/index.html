@@ -1,0 +1,97 @@
+<html lang="en" dir="ltr">
+    <head>
+    <title>ALERTAUFES</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700,800|Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+    </head>
+  <body>
+    <div class="app">
+      <div id="deviceready">
+        
+
+        <div id="app">
+
+
+          <div class="login-page" id="login-page">
+            <div class="login-logo">
+              <img src="img/logo.svg">
+            </div>
+            <div class="login-form">
+              <div class="form-group-2">
+                <input id="login" class="form-control-2" type='text' name="login" required>
+                <label for="login" class="control-label-2">LOGIN</label>
+                <i class="bar"></i>
+              </div>
+              <div class="form-group-2">
+                <input id="senha" class="form-control-2" type="password" name="senha" required>
+                <label for="senha" class="control-label-2">SENHA</label>
+                <i class="bar"></i>
+              </div>
+              <div class="login-button-box">
+                <div id="login-button" class="login-button">
+                  <a>OK</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="home-page" id="home-page">
+            <div class="logo">
+              <h1><font color="white">ALERTA</font><span class="main-color">UFES</span></h1>
+            </div>
+
+            <div class="categories">
+              <div class="category" id="1">
+                <span>Atividade Suspeita</span>
+              </div>
+              <div class="category" id="2">
+                <span>Acidente de trânsito</span>
+              </div>
+              <div class="category" id="3">
+                <span>Roubo de bicicleta</span>
+              </div>
+              <div class="category" id="4">
+                <span>Briga</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="loading" id="loading">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            <h2><font color="white">Enviando...</font></h2>
+          </div>
+
+
+          <div class="success" id="success">
+            <div class="success-box">
+              <img src="img/check.svg" class="success-icon">
+            </div>
+            <h2><font color="white">Alerta enviado</font></h2>
+            <div class="button success-button" id="success-button">
+              <a>OK</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    
+  </body>
+</html>
