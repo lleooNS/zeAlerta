@@ -474,3 +474,8 @@ a:visited {
 .success-button {
   margin-top: 20px;
 }
+
+.botao-sair{
+  margin-top: 3%;
+  text-align: center;
+}

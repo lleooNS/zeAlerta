@@ -32,7 +32,7 @@
     <plugin name="cordova-plugin-keyboard" spec="^1.2.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <preference name="Splashscreen" value="screen" />
-    <preference name="SplashScreenDelay" value="30000" />
+    <preference name="SplashScreenDelay" value="5000" />
     <preference name="SplashMaintainAspectRatio" value="false" />
     <engine name="android" spec="^7.1.1" />
 </widget>

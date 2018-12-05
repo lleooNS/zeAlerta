@@ -44,7 +44,7 @@ function onDeviceReady()
 
 
 */
-
+  
 
 
   const loginButton = document.getElementById('login-button');
@@ -60,6 +60,14 @@ function onDeviceReady()
   const loadingPage = document.getElementById('loading');
   const successPage = document.getElementById('success');
   const successButton = document.getElementById('success-button');
+
+  if(window.localStorage.getItem("entrou"))
+  {
+    loginPage.style.display = "none";
+    homePage.style.display = "block";
+    loadingPage.style.display = "none";
+    successPage.style.display = "none";
+  }
 
   var lat;
   var lng;
@@ -84,6 +92,9 @@ function onDeviceReady()
         })
         .then(function(response) {
           if (response.ok) {
+
+            window.localStorage.setItem("entrou",true);
+
             return response.json();
           } else {
             console.log(response);
@@ -170,6 +181,27 @@ function onDeviceReady()
     successPage.style.display = "none";
   });
 
+  $("#sair").click(function(buttomIndex){
+    function confirmarSair(buttomIndex)
+    {
+      if(buttomIndex == 2)
+      {
+        window.localStorage.removeItem("entrou");
 
+        loginPage.style.display = "block";
+        homePage.style.display = "none";
+        loadingPage.style.display = "none";
+        successPage.style.display = "none";  
+      }
+    }
+    navigator.notification.confirm(
+      "Tem certeza que deseja sair?",
+      confirmarSair,
+      "Sair",
+      ["Cancelar","Sair"]
+    );
+
+
+  });
 
 };

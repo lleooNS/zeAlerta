@@ -80,7 +80,7 @@ var app = {
         {
             navigator.notification.alert
             (
-                "Sem internet!: " +rede,
+                "O aplicativo necessita de internet. Verifique a conexão.",
                 null,
                 "Rede",
                 'OK'
@@ -102,6 +102,7 @@ var app = {
                         function (success)
                         {
                             console.log("Successfully requested accuracy: "+success.message);
+/*
                             navigator.notification.alert
                             (
                                 "Sucesso: "+success.message,
@@ -109,6 +110,7 @@ var app = {
                                 "Estava ativada",
                                 'OK'
                             );
+*/
                         }, 
                         function (error)
                         {

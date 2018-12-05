@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Nov 01 20:49:35 BRT 2018
+#Wed Nov 28 15:53:25 BRST 2018
 17.baseType=DIRECTORY
 4.path=www/plugins/es6-promise-plugin/www/promise.js
 25.base=/root/Documentos/Cordova/alerta/platforms/android/app/build/intermediates/assets/debug
@@ -39,7 +39,7 @@ count=30
 23.baseType=DIRECTORY
 1.base=/root/Documentos/Cordova/alerta/platforms/android/app/build/intermediates/assets/debug
 1.set=ASSET
-26.path=www/js/index.js
+26.path=www/plugins/cordova-plugin-network-information/www/network.js
 25.baseType=DIRECTORY
 0.path=www/plugins/cordova-plugin-geolocation/www/android/geolocation.js
 21.base=/root/Documentos/Cordova/alerta/platforms/android/app/build/intermediates/assets/debug
@@ -61,7 +61,7 @@ count=30
 16.baseType=DIRECTORY
 14.set=ASSET
 2.base=/root/Documentos/Cordova/alerta/platforms/android/app/build/intermediates/assets/debug
-27.path=www/plugins/cordova-plugin-network-information/www/network.js
+27.path=www/js/index.js
 18.baseType=DIRECTORY
 1.path=www/plugins/cordova-plugin-dialogs/www/android/notification.js
 22.base=/root/Documentos/Cordova/alerta/platforms/android/app/build/intermediates/assets/debug
@@ -99,7 +99,7 @@ count=30
 9.path=www/index.html
 18.path=www/plugins/cordova-plugin-network-information/www/Connection.js
 4.base=/root/Documentos/Cordova/alerta/platforms/android/app/build/intermediates/assets/debug
-11.path=www/js/main.js
+11.path=www/plugins/cordova-plugin-dialogs/www/notification.js
 29.path=www/img/logo.png
 23.set=ASSET
 9.set=ASSET
@@ -120,4 +120,4 @@ count=30
 15.baseType=DIRECTORY
 3.set=ASSET
 5.base=/root/Documentos/Cordova/alerta/platforms/android/app/build/intermediates/assets/debug
-12.path=www/plugins/cordova-plugin-dialogs/www/notification.js
+12.path=www/js/main.js
