@@ -14,7 +14,7 @@
   <body>
     <div class="app">
       <div id="deviceready">
-        
+
 
         <div id="app">
 
@@ -62,15 +62,17 @@
                 <span>Briga</span>
               </div>
             </div>
-            <div class="botao-sair" id="sair">
-              <a><font color="white">SAIR</font></a>
+            <div class="botao-sair-box">
+              <div class="button botao-sair" id="sair">
+                <a>SAIR</a>
+              </div>
             </div>
           </div>
 
 
           <div class="loading" id="loading">
             <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-            <h2><font color="white">Enviando...</font></h2>
+            <h2 id="loading-message"></h2>
           </div>
 
 
@@ -89,12 +91,12 @@
       </div>
     </div>
 
-    
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    
-    
+
+
   </body>
 </html>

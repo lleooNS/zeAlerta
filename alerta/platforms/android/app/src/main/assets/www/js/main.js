@@ -1,9 +1,9 @@
 document.addEventListener("deviceReady", onDeviceReady, false);
 
 function onDeviceReady()
-{  
+{
 
-/* 
+/*
 
   function muda(){
       $('.login-page').css("display", "none");
@@ -11,7 +11,7 @@ function onDeviceReady()
       $('.loading').css("display", "none");
       $('.success').css("display", "none");
       $('body').css("background-color", "white");
-  
+
 
       navigator.geolocation.getCurrentPosition(function(pos){
 
@@ -44,7 +44,7 @@ function onDeviceReady()
 
 
 */
-  
+
 
 
   const loginButton = document.getElementById('login-button');
@@ -58,6 +58,7 @@ function onDeviceReady()
 
 
   const loadingPage = document.getElementById('loading');
+  const loadingMessage = document.getElementById('loading-message');
   const successPage = document.getElementById('success');
   const successButton = document.getElementById('success-button');
 
@@ -79,8 +80,13 @@ function onDeviceReady()
 
   });
 
-  loginButton.addEventListener('click', function () 
+  loginButton.addEventListener('click', function ()
   {
+    loadingMessage.innerText = ""
+    loginPage.style.display = "none";
+    homePage.style.display = "none";
+    loadingPage.style.display = "flex";
+    successPage.style.display = "none";
     cordovaFetch('http://paradigmas.hol.es/web/usuario/login', {method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -98,6 +104,10 @@ function onDeviceReady()
             return response.json();
           } else {
             console.log(response);
+            loginPage.style.display = "block";
+            homePage.style.display = "none";
+            loadingPage.style.display = "none";
+            successPage.style.display = "none";
             navigator.notification.alert
             (
                 "Login ou Senha inválidos",
@@ -109,7 +119,7 @@ function onDeviceReady()
           }
         }).then( function(response){
             console.log(response);
-/*            
+/*
             navigator.notification.alert
             (
                 response,
@@ -133,7 +143,8 @@ function onDeviceReady()
     categories[i].addEventListener('click', function () {
       console.log(this.id);
       console.log(localStorage.getItem("access_token"));
-      
+
+      loadingMessage.innerText = "Enviando..."
       loginPage.style.display = "none";
       homePage.style.display = "none";
       loadingPage.style.display = "flex";
@@ -151,23 +162,23 @@ function onDeviceReady()
           }),
           })
           .then(function(response) {
-            if (response.ok) 
+            if (response.ok)
             {
               return response.json();
-            } 
-            else 
+            }
+            else
             {
               console.log(response);
-              
+
               throw new Error(response.statusText);
             }
           }).then( function(response){
               console.log(response);
               loginPage.style.display = "none";
               homePage.style.display = "none";
-              
+
               setTimeout(function(){loadingPage.style.display = "none";successPage.style.display = "flex";}, 3000);
-              
+
             });
     });
 
@@ -191,7 +202,7 @@ function onDeviceReady()
         loginPage.style.display = "block";
         homePage.style.display = "none";
         loadingPage.style.display = "none";
-        successPage.style.display = "none";  
+        successPage.style.display = "none";
       }
     }
     navigator.notification.confirm(
