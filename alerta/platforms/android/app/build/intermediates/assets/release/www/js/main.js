@@ -4,17 +4,13 @@ function onDeviceReady()
 {
 
 /*
-
   function muda(){
       $('.login-page').css("display", "none");
       $('.home-page').css("display", "block");
       $('.loading').css("display", "none");
       $('.success').css("display", "none");
       $('body').css("background-color", "white");
-
-
       navigator.geolocation.getCurrentPosition(function(pos){
-
         navigator.notification.alert
         (
             "Latitude: " +pos.coords.latitude+ ", Longitude: " +pos.coords.longitude,
@@ -22,27 +18,16 @@ function onDeviceReady()
             "Latitude e Longitude",
             'OK'
         );
-
-
       });
   }
-
-
-
   $(".login-button").click(muda);
-
   function enviar(){
       $('.login-page').css("display", "none");
       $('.home-page').css("display", "none");
       $('.loading').css("display", "flex");
       $('.success').css("display", "none");
   }
-
   $(".category").click(enviar);
-
-
-
-
 */
 
 
@@ -168,8 +153,16 @@ function onDeviceReady()
             }
             else
             {
+              loadingPage.style.display = "none";
+              homePage.style.display = "block";
+              navigator.notification.alert
+              (
+                  "Não foi possível enviar o Alerta.",
+                  null,
+                  "Erro!",
+                  'OK'
+              );
               console.log(response);
-
               throw new Error(response.statusText);
             }
           }).then( function(response){
@@ -177,7 +170,10 @@ function onDeviceReady()
               loginPage.style.display = "none";
               homePage.style.display = "none";
 
-              setTimeout(function(){loadingPage.style.display = "none";successPage.style.display = "flex";}, 3000);
+              setTimeout(function() {
+                loadingPage.style.display = "none";successPage.style.display = "flex";
+              }, 3000);
+
 
             });
     });

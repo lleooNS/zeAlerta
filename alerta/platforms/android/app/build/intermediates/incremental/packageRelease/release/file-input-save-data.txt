@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Dec 06 11:14:11 BRST 2018
+#Thu Dec 06 12:24:57 BRST 2018
 17.baseType=DIRECTORY
 4.path=www/plugins/cordova-plugin-network-information/www/network.js
 25.base=/home/gustavo/Área de Trabalho/zeAlerta/alerta/platforms/android/app/build/intermediates/assets/release
